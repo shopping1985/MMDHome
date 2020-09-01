@@ -30,16 +30,19 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'MMDHome/Classes/*'
+  #s.source_files = 'MMDHome/Classes/*'
   #--类文件分层--#
-  s.subspec 'target' do |ss|
-  ss.source_files = 'MMDHome/Classes/target/*.{h,m}'
+  s.subspec 'rank' do |ss|
+    ss.source_files = 'MMDHome/Classes/rank/*.{h,m}'
   end
   s.subspec 'home' do |ss|
-  ss.source_files = 'MMDHome/Classes/home/*.{h,m}'
+    ss.dependency 'MMDHome/rank'
+    ss.source_files = 'MMDHome/Classes/home/*.{h,m}'
   end
-  s.subspec 'rank' do |ss|
-  ss.source_files = 'MMDHome/Classes/rank/*.{h,m}'
+  s.subspec 'target' do |ss|
+    ss.dependency 'MMDHome/home'
+    ss.dependency 'MMDHome/rank'
+    ss.source_files = 'MMDHome/Classes/target/*.{h,m}'
   end
   #--资源文件--#
   s.resource_bundles = {

@@ -7,12 +7,15 @@ PODS:
     - ZDUIComponent
     - ZDUtilComponent
   - MMDHome/home (0.1.0):
+    - MMDHome/rank
     - ZDUIComponent
     - ZDUtilComponent
   - MMDHome/rank (0.1.0):
     - ZDUIComponent
     - ZDUtilComponent
   - MMDHome/target (0.1.0):
+    - MMDHome/home
+    - MMDHome/rank
     - ZDUIComponent
     - ZDUtilComponent
   - ZDUIComponent (0.1.1):
@@ -54,7 +57,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
-  MMDHome: 23de9abfda0b4c3cccae6441406525fedf53beaa
+  MMDHome: b8a351d5ad5be1d814fec6c069bcfb2e9394c3d1
   ZDUIComponent: bfe05732fd577d2062a6ba86e9d32e7033c2d801
   ZDUtilComponent: f1cd1d91862469754ce417256e172bed4bae26bf
 

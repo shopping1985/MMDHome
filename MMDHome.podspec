@@ -28,15 +28,30 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/shopping1985/MMDHome.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
-  s.source_files = 'MMDHome/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'MMDHome' => ['MMDHome/Assets/*.png']
-  # }
+  s.source_files = 'MMDHome/Classes/*'
+  #--类文件分层--#
+  s.subspec 'target' do |ss|
+  ss.source_files = 'MMDHome/Classes/target/*.{h,m}'
+  end
+  s.subspec 'home' do |ss|
+  ss.source_files = 'MMDHome/Classes/home/*.{h,m}'
+  end
+  s.subspec 'rank' do |ss|
+  ss.source_files = 'MMDHome/Classes/rank/*.{h,m}'
+  end
+  #--资源文件--#
+  s.resource_bundles = {
+     'MMDHome' => ['MMDHome/Assets/*','MMDHome/Classes/**/*.{storyboard,xib}']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'ZDUtilComponent'
+  s.dependency 'ZDUIComponent'
+  
+  #--预编译头内容需执行pod install后才生成到MMDHome-prefix.pch
+  s.prefix_header_contents = '#import <ZDUtilComponent/ZDUtilsComponent.h>','#import <ZDUIComponent/ZDUIComponent.h>','#define MMDHome_Bundle [NSBundle wg_subBundleWithBundleName:@"MMDHome" targetClass:[self class]]'
 end

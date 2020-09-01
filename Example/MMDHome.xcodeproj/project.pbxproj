@@ -60,13 +60,13 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		91C111D787113FA9AC8E4F89 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		91C111D787113FA9AC8E4F89 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9553A31F38CD562DFCE93635 /* Pods_MMDHome_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMDHome_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CFC30838C56022478C2FAF8 /* MMDHome.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MMDHome.podspec; path = ../MMDHome.podspec; sourceTree = "<group>"; };
+		9CFC30838C56022478C2FAF8 /* MMDHome.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MMDHome.podspec; path = ../MMDHome.podspec; sourceTree = "<group>"; };
 		A1C9140F31FEFDC89DCFF787 /* Pods_MMDHome_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMDHome_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2CA78F018314A1986B0071 /* Pods-MMDHome_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMDHome_Example.release.xcconfig"; path = "Target Support Files/Pods-MMDHome_Example/Pods-MMDHome_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E545DAFB93A4279E56B035DB /* Pods-MMDHome_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMDHome_Tests.release.xcconfig"; path = "Target Support Files/Pods-MMDHome_Tests/Pods-MMDHome_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		FBFBF3421557D6AE6131F998 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FBFBF3421557D6AE6131F998 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,6 @@
 				34698F842DEE6EB08FFF5045 /* Pods-MMDHome_Tests.debug.xcconfig */,
 				E545DAFB93A4279E56B035DB /* Pods-MMDHome_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = shopping1985;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 2BX5796643;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -303,10 +306,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MMDHome_Example/Pods-MMDHome_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MMDHome/MMDHome.framework",
+				"${BUILT_PRODUCTS_DIR}/ZDUIComponent/ZDUIComponent.framework",
+				"${BUILT_PRODUCTS_DIR}/ZDUtilComponent/ZDUtilComponent.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDHome.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZDUIComponent.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZDUtilComponent.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -494,6 +503,7 @@
 			baseConfigurationReference = 091A1D8C2E5EE53D4FD0EE3D /* Pods-MMDHome_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2BX5796643;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MMDHome/MMDHome-Prefix.pch";
 				INFOPLIST_FILE = "MMDHome/MMDHome-Info.plist";
@@ -510,6 +520,7 @@
 			baseConfigurationReference = DB2CA78F018314A1986B0071 /* Pods-MMDHome_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2BX5796643;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MMDHome/MMDHome-Prefix.pch";
 				INFOPLIST_FILE = "MMDHome/MMDHome-Info.plist";

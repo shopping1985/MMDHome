@@ -1,0 +1,55 @@
+{
+  "name": "MMDHome",
+  "version": "0.1.0",
+  "summary": "A short description of MMDHome.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/shopping1985/MMDHome",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "shopping1985": "285624489@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/shopping1985/MMDHome.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "MMDHome/Classes/*",
+  "resource_bundles": {
+    "MMDHome": [
+      "MMDHome/Assets/*",
+      "MMDHome/Classes/**/*.{storyboard,xib}"
+    ]
+  },
+  "dependencies": {
+    "ZDUtilComponent": [
+
+    ],
+    "ZDUIComponent": [
+
+    ]
+  },
+  "prefix_header_contents": [
+    "#import <ZDUtilComponent/ZDUtilsComponent.h>",
+    "#import <ZDUIComponent/ZDUIComponent.h>",
+    "#define MMDHome_Bundle [NSBundle wg_subBundleWithBundleName:@\"MMDHome\" targetClass:[self class]]"
+  ],
+  "subspecs": [
+    {
+      "name": "target",
+      "source_files": "MMDHome/Classes/target/*.{h,m}"
+    },
+    {
+      "name": "home",
+      "source_files": "MMDHome/Classes/home/*.{h,m}"
+    },
+    {
+      "name": "rank",
+      "source_files": "MMDHome/Classes/rank/*.{h,m}"
+    }
+  ]
+}
